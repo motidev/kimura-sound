@@ -2,7 +2,7 @@ const guildmodel = require("../../models/guild.js");
 const { wssend } = require("../../functions/ws-send");
 const executeButton = require("../../functions/executeButton");
 const executeSelectMenu = require("../../functions/executeSelectMenu");
-
+const userSchema = require("../../models/blacklist.js")
 module.exports = {
   name: "interactionCreate",
   async execute(interaction, kimuraClient) {
@@ -44,6 +44,22 @@ module.exports = {
       if (command.developer && interaction.user.id !== "972840062209376306") {
         return interaction.reply({
           content: "This command is only avaible to the developer",
+          ephemeral: true,
+        });
+      }
+
+      const userBlacklisted = await userSchema.findOne({
+        userId: interaction.user.id
+      })
+
+      if(userBlacklisted) {
+        const language = interaction.member.guild.lang;
+        
+        return interaction.reply({
+          content:  kimuraClient.languages.__({
+            phrase: "user.blacklist",
+            locale: language,
+          }),
           ephemeral: true,
         });
       }

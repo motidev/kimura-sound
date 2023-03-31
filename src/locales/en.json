@@ -37,5 +37,8 @@
 	},
 	"gd" : {
 		"title" : "Goodbyes"
+	},
+	"user": {
+		"blacklist": "You are on the blacklist so you cannot use any command."
 	}
 }

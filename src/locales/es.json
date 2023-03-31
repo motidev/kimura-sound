@@ -1,0 +1,41 @@
+{
+	"permissions": {
+		"admin": "No tienes suficientes permisos (Administrador)  para ejecutar este comando."
+	},
+	"configcommand": {
+		"newLanguage": "Has seleccionado un nuevo lenguaje."
+	},
+	"profilecommand": {
+		"userid": "Id del usuario:",
+		"userrole": "Roles del usuario:",
+		"member": "Miembro de discord desde:",
+		"server": "Se unio al servidor:",
+		"banner": "Banner del usuario:",
+		"nobanner": "Este usuario no tiene banner"
+	},
+	"menu": {
+		"title": "🔧 Menu de configuración",
+		"langtittle": "Configuración finalizada.",
+		"langdesc": "Ha cambiado el idioma a **{lang}**",
+		"exitBtn": "Salir",
+		"menulang": "Configura el idioma de tu servidor.",
+		"langBtn": "Idioma"
+	},
+	"lang": {
+		"langtitle": "🔎 Configuración del idioma",
+		"langdesc": "Selecciona el idioma que quiere que el bot tenga en su servidor",
+		"langselect": "Selecciona un idioma"
+	},
+	"airport" : {
+		"title": "🛫 Configuración de Bienvenidas y Despedidas",
+		"desc" : "Configura las bienvenidas y despedidasd de tu servidor en un unico canal."
+	},
+	"welcome": {
+		"title": "Bienvenidas",
+		"desc": "Selecciona en el menu despegable el canal donde quiere que se envie la bienvenida y en el boton datos se le abrira un formulario en el que tendra que introducir el mensaje que quiere que se envie con la bienvenida y la imagen de fondo.",
+		"modalbtn": "Datos"
+	},
+	"gd" : {
+		"title" : "Despedidas"
+	}
+}

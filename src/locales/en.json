@@ -1,0 +1,41 @@
+{
+	"permissions": {
+		"admin": "You don't have enough permissions (Administrator) to execute this command."
+	},
+	"configcommand": {
+		"newLanguage": "You've selected a new language."
+	},
+	"profilecommand": {
+		"userid": "User id:",
+		"userrole": "User roles:",
+		"member": "Discord member since:",
+		"server": "Joined the server:",
+		"banner": "User banner:",
+		"nobanner": "This user has no banner"
+	},
+	"menu": {
+		"title": "🔧 Setup Menu",
+		"langtittle": "Configuration finished",
+		"langdesc": "You have changed the language to **{lang}**",
+		"exitBtn": "Exit",
+		"menulang": "Set the language of your server.",
+		"langBtn": "Idioma"
+	},
+	"lang": {
+		"langtitle": "🔎 Language settings",
+		"langdesc": "Select the language you want the bot to have on your server",
+		"langselect": "Select a language"
+	},
+	"airport" : {
+		"title": "🛫 Welcome and Goodbye Configuration",
+		"desc" : "Configure the welcomes and goodbyes of your server in a single channel."
+	},
+	"welcome": {
+		"title": "Welcomes",
+		"desc": "Select the channel where you want the welcome to be sent from the dropdown menu and a form will open in the data button in which you will have to enter the message you want to be sent with the welcome and the background image.",
+		"modalbtn": "Data"
+	},
+	"gd" : {
+		"title" : "Goodbyes"
+	}
+}

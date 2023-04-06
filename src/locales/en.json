@@ -1,44 +1,70 @@
 {
-	"permissions": {
-		"admin": "You don't have enough permissions (Administrator) to execute this command."
-	},
-	"configcommand": {
-		"newLanguage": "You've selected a new language."
-	},
-	"profilecommand": {
-		"userid": "User id:",
-		"userrole": "User roles:",
-		"member": "Discord member since:",
-		"server": "Joined the server:",
-		"banner": "User banner:",
-		"nobanner": "This user has no banner"
-	},
-	"menu": {
-		"title": "🔧 Setup Menu",
-		"langtittle": "Configuration finished",
-		"langdesc": "You have changed the language to **{lang}**",
-		"exitBtn": "Exit",
-		"menulang": "Set the language of your server.",
-		"langBtn": "Idioma"
-	},
-	"lang": {
-		"langtitle": "🔎 Language settings",
-		"langdesc": "Select the language you want the bot to have on your server",
-		"langselect": "Select a language"
-	},
-	"airport" : {
-		"title": "🛫 Welcome and Goodbye Configuration",
-		"desc" : "Configure the welcomes and goodbyes of your server in a single channel."
-	},
-	"welcome": {
-		"title": "Welcomes",
-		"desc": "Select the channel where you want the welcome to be sent from the dropdown menu and a form will open in the data button in which you will have to enter the message you want to be sent with the welcome and the background image.",
-		"modalbtn": "Data"
-	},
-	"gd" : {
-		"title" : "Goodbyes"
-	},
-	"user": {
-		"blacklist": "You are on the blacklist so you cannot use any command."
-	}
+  "permissions": {
+    "admin": "You don't have enough permissions (Administrator) to execute this command."
+  },
+  "configcommand": {
+    "newLanguage": "You've selected a new language."
+  },
+  "profilecommand": {
+    "userid": "User id:",
+    "userrole": "User roles:",
+    "member": "Discord member since:",
+    "server": "Joined the server:",
+    "banner": "User banner:",
+    "nobanner": "This user has no banner"
+  },
+  "menu": {
+    "title": "🔧 Setup Menu",
+    "langtittle": "Configuration finished",
+    "langdesc": "You have changed the language to **{lang}**",
+    "exitBtn": "Exit",
+    "menulang": "Set the language of your server.",
+    "langBtn": "Idioma"
+  },
+  "lang": {
+    "langtitle": "🔎 Language settings",
+    "langdesc": "Select the language you want the bot to have on your server",
+    "langselect": "Select a language"
+  },
+  "airport": {
+    "title": "🛫 Welcome and Goodbye Configuration",
+    "desc": "Configure the welcomes and goodbyes of your server in a single channel."
+  },
+  "welcome": {
+    "title": "Welcomes",
+    "desc": "Select the channel where you want the welcome to be sent from the dropdown menu and a form will open in the data button in which you will have to enter the message you want to be sent with the welcome and the background image.",
+    "modalbtn": "Data"
+  },
+  "gd": {
+    "title": "Goodbyes"
+  },
+  "user": {
+    "blacklist": "You are on the blacklist so you cannot use any command."
+  },
+  "music": {
+    "voiceChannel": "You need to be in voice channel.",
+    "samechannel": "You must be in the same channel as me.",
+    "add": "Song **{song}** added to queue!",
+    "title": "🎵 Now playing."
+  },
+  "stopbtn": {
+    "1": "`🎤`  The song is already paused",
+    "2": "`🎤`  The song has been paused successfully"
+  },
+  "playbtn": {
+    "1": "`🎤`  The song is not paused.",
+    "2": "`🎤`  The song has been resumed."
+  },
+  "loopbtn": {
+    "1": "`🎤`  The song has been looped.",
+    "2": "`🎤`  The song is no longer on loop."
+  },
+  "skipbtn": {
+    "1": "`🎤`  The song has been skipped.",
+    "2": "`🎤`  There are no songs to skip."
+  },
+  "volume": {
+    "down": "`🔉` The volume has been reduced.",
+    "up": "`🔊` The volume has been increased."
+  }
 }

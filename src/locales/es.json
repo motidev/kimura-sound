@@ -1,44 +1,70 @@
 {
-	"permissions": {
-		"admin": "No tienes suficientes permisos (Administrador)  para ejecutar este comando."
-	},
-	"configcommand": {
-		"newLanguage": "Has seleccionado un nuevo lenguaje."
-	},
-	"profilecommand": {
-		"userid": "Id del usuario:",
-		"userrole": "Roles del usuario:",
-		"member": "Miembro de discord desde:",
-		"server": "Se unio al servidor:",
-		"banner": "Banner del usuario:",
-		"nobanner": "Este usuario no tiene banner"
-	},
-	"menu": {
-		"title": "🔧 Menu de configuración",
-		"langtittle": "Configuración finalizada.",
-		"langdesc": "Ha cambiado el idioma a **{lang}**",
-		"exitBtn": "Salir",
-		"menulang": "Configura el idioma de tu servidor.",
-		"langBtn": "Idioma"
-	},
-	"lang": {
-		"langtitle": "🔎 Configuración del idioma",
-		"langdesc": "Selecciona el idioma que quiere que el bot tenga en su servidor",
-		"langselect": "Selecciona un idioma"
-	},
-	"airport" : {
-		"title": "🛫 Configuración de Bienvenidas y Despedidas",
-		"desc" : "Configura las bienvenidas y despedidasd de tu servidor en un unico canal."
-	},
-	"welcome": {
-		"title": "Bienvenidas",
-		"desc": "Selecciona en el menu despegable el canal donde quiere que se envie la bienvenida y en el boton datos se le abrira un formulario en el que tendra que introducir el mensaje que quiere que se envie con la bienvenida y la imagen de fondo.",
-		"modalbtn": "Datos"
-	},
-	"gd" : {
-		"title" : "Despedidas"
-	},
-	"user": {
-		"blacklist": "Estas en la blacklist por lo que no puedes usar ningun comando."
-	}
+  "permissions": {
+    "admin": "No tienes suficientes permisos (Administrador)  para ejecutar este comando."
+  },
+  "configcommand": {
+    "newLanguage": "Has seleccionado un nuevo lenguaje."
+  },
+  "profilecommand": {
+    "userid": "Id del usuario:",
+    "userrole": "Roles del usuario:",
+    "member": "Miembro de discord desde:",
+    "server": "Se unio al servidor:",
+    "banner": "Banner del usuario:",
+    "nobanner": "Este usuario no tiene banner"
+  },
+  "menu": {
+    "title": "🔧 Menu de configuración",
+    "langtittle": "Configuración finalizada.",
+    "langdesc": "Ha cambiado el idioma a **{lang}**",
+    "exitBtn": "Salir",
+    "menulang": "Configura el idioma de tu servidor.",
+    "langBtn": "Idioma"
+  },
+  "lang": {
+    "langtitle": "🔎 Configuración del idioma",
+    "langdesc": "Selecciona el idioma que quiere que el bot tenga en su servidor",
+    "langselect": "Selecciona un idioma"
+  },
+  "airport": {
+    "title": "🛫 Configuración de Bienvenidas y Despedidas",
+    "desc": "Configura las bienvenidas y despedidasd de tu servidor en un unico canal."
+  },
+  "welcome": {
+    "title": "Bienvenidas",
+    "desc": "Selecciona en el menu despegable el canal donde quiere que se envie la bienvenida y en el boton datos se le abrira un formulario en el que tendra que introducir el mensaje que quiere que se envie con la bienvenida y la imagen de fondo.",
+    "modalbtn": "Datos"
+  },
+  "gd": {
+    "title": "Despedidas"
+  },
+  "user": {
+    "blacklist": "Estas en la blacklist por lo que no puedes usar ningun comando."
+  },
+  "music": {
+    "voiceChannel": "Tienes que estar en un canal de voz.",
+    "samechannel": "Debes estar en el mismo canal que yo.",
+    "search": "Canción **{song}** añadida a la cola!",
+    "title": "🎵 Ahora sonando."
+  },
+  "stopbtn": {
+    "1": "`🎤`  La canción ya esta pausada.",
+    "2": "`🎤`  La canción ha sido pausada correctamente."
+  },
+  "playbtn": {
+    "1": "`🎤`  La canción no esta pausada.",
+    "2": "`🎤`  La canción ha sido reanudada."
+  },
+  "loopbtn": {
+    "1": "`🎤`  La canción se ha puesto en bucle.",
+    "2": "`🎤`  La canción ya no esta en bucle."
+  },
+  "skipbtn": {
+    "1": "`🎤`  La canción ha sido saltada.",
+    "2": "`🎤`  No hay canciones para saltar."
+  },
+  "volume": {
+    "down": "`🔉` El volumen ha sido reducido.",
+    "up": "`🔊` El volumen ha sido aumentado."
+  }
 }

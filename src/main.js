@@ -10,8 +10,14 @@ const kimuraClient = new Client({
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildWebhooks,
+    GatewayIntentBits.GuildVoiceStates
   ],
 });
+
+
+// Music discord bot
+const { loadMusic } = require("./Core/MusicHandler");
+loadMusic(kimuraClient);
 
 // Listener
 const { loadListeners } = require("./Core/ListenerHandler");
@@ -27,6 +33,7 @@ kimuraClient.buttons = new Collection();
 const { loadSelect } = require("./Core/SelectHandler.js");
 loadSelect(kimuraClient);
 kimuraClient.selectMenus = new Collection();
+
 
 //commands collection
 kimuraClient.commands = new Collection();
@@ -64,7 +71,6 @@ kimuraClient.config = require("./config/config.json");
 
 // Crash
 require("./Core/CrashHandler")(kimuraClient);
-
 
 //Login bot
 kimuraClient.login(process.env.kimuratoken);

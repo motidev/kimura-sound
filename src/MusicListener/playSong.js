@@ -8,21 +8,33 @@ const {
 module.exports = (kimuraClient, queue, song) => {
   const embed = new EmbedBuilder()
     .setColor(kimuraClient.config.defaultColorEmbed)
-    .setTitle("Ahora sonando")
+    .setTitle( kimuraClient.languages.__({
+      phrase: "music.title",
+      locale: "es",
+    }))
     .setDescription(`${song.name}`)
     .addFields(
       {
-        name: "Duration",
+        name: kimuraClient.languages.__({
+          phrase: "music.title1",
+          locale: "es",
+        }),
         value: `\`[${song.formattedDuration}]\``,
         inline: true,
       },
       {
-        name: "Requested by ",
+        name: kimuraClient.languages.__({
+          phrase: "music.title2",
+          locale: "es",
+        }),
         value: `${queue.songs[0].user}`,
         inline: true,
       },
       {
-        name: "Cola ",
+        name: kimuraClient.languages.__({
+          phrase: "music.title3",
+          locale: "es",
+        }),
         value: `${queue.songs.length} `,
         inline: true,
       }
@@ -63,11 +75,11 @@ module.exports = (kimuraClient, queue, song) => {
   let components = new ActionRowBuilder().addComponents([
     stopBtn,
     playBtn,
-    skipBtn,
-    loopBtn,
+    skipBtn
   ]);
 
   let components2 = new ActionRowBuilder().addComponents([
+    loopBtn,
     voldownBtn,
     volupBtn,
   ]);
@@ -76,4 +88,6 @@ module.exports = (kimuraClient, queue, song) => {
     embeds: [embed],
     components: [components, components2],
   });
+
+  console.log(interaction)
 };

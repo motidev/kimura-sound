@@ -17,7 +17,7 @@ module.exports ={
         `)
 
         // pressence bot
-        kimuraClient.user.setPresence({ activities: [{ name: 'version beta', type: 3 }], status: 'online'})
+        kimuraClient.user.setPresence({ activities: [{ name: 'Dextiny Studio', type: 3 }], status: 'online'})
 
         //loadede commands
         loadCommands(kimuraClient);

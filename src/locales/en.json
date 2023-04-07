@@ -76,5 +76,10 @@
     "advert": "Want to skip the entire song queue?",
     "yes": "You have successfully skipped the song queue",
     "no": "Song skipping has been canceled"
-  }
+  },
+  "list": {
+		"title": "Songs that are queued",
+		"now": "Song that is playing",
+		"rest": "Songs remaining (in order of playback)"
+	}
 }

@@ -77,5 +77,10 @@
 		"advert": "¿Quiere saltar toda la cola de canciones?",
 		"yes": "Ha saltado la cola de canciones correctamente",
 		"no": "Se ha cancelado el salto de canciones"
+	},
+	"list": {
+		"title": "Canciones que se encuentran en cola",
+		"now": "Canción que esta sonando",
+		"rest": "Canciones que quedan (van en orden de reproduccion)"
 	}
 }

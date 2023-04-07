@@ -11,10 +11,7 @@ module.exports = async (kimuraClient, queue, playlist) => {
         { title: playlist.name }
       )
     )
-    .setColor(kimuraClient.config.defaultColorEmbed)
+    .setColor(kimuraClient.config.defaultColorEmbed);
 
   queue.textChannel.send({ embeds: [embed] });
-
-  console.log(playlist)
-
 };

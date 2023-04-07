@@ -45,7 +45,7 @@ module.exports = {
       });
     }
 
-    await queue.songs.splice(1, queue.songs.length);
+    await kimuraClient.distube.stop(interaction.guild.id);
     interaction.reply({ embeds: [embedskip], ephemeral: true });
   },
 };

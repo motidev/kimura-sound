@@ -5,13 +5,15 @@ const {
   EmbedBuilder,
 } = require("discord.js");
 
-module.exports = (kimuraClient, queue, song) => {
+module.exports = (kimuraClient, queue, song, playlist) => {
   const embed = new EmbedBuilder()
     .setColor(kimuraClient.config.defaultColorEmbed)
-    .setTitle( kimuraClient.languages.__({
-      phrase: "music.title",
-      locale: "es",
-    }))
+    .setTitle(
+      kimuraClient.languages.__({
+        phrase: "music.title",
+        locale: "es",
+      })
+    )
     .setDescription(`${song.name}`)
     .addFields(
       {
@@ -59,9 +61,8 @@ module.exports = (kimuraClient, queue, song) => {
 
   const skipallBtn = new ButtonBuilder()
     .setCustomId("skipallbtn")
-    .setStyle(ButtonStyle.Secondary)
-    .setLabel(`⏭`);
-
+    .setStyle(ButtonStyle.Danger)
+    .setLabel(`✖`);
 
   const loopBtn = new ButtonBuilder()
     .setCustomId("loopbtn")
@@ -78,17 +79,23 @@ module.exports = (kimuraClient, queue, song) => {
     .setStyle(ButtonStyle.Secondary)
     .setLabel(`🔊`);
 
+  const listBtn = new ButtonBuilder()
+    .setCustomId("listbtn")
+    .setStyle(ButtonStyle.Secondary)
+    .setLabel(`📋`);
+
   let components = new ActionRowBuilder().addComponents([
     stopBtn,
     playBtn,
     skipBtn,
-    skipallBtn
+    skipallBtn,
   ]);
 
   let components2 = new ActionRowBuilder().addComponents([
     loopBtn,
     voldownBtn,
     volupBtn,
+    listBtn
   ]);
 
   queue.textChannel.send({

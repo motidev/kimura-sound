@@ -88,6 +88,4 @@ module.exports = (kimuraClient, queue, song) => {
     embeds: [embed],
     components: [components, components2],
   });
-
-  console.log(interaction)
 };

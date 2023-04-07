@@ -48,7 +48,9 @@
     "title": "🎵 Now playing",
     "title1": "`⌚` Duration",
     "title2": "`👤` Requested by",
-    "title3": "`📻` Queued songs"
+    "title3": "`📻` Queued songs",
+    "added": "Song **{title}** added to queue! `{duration}`",
+    "playlist": "Playlist **{title}** added to queue!"
   },
   "stopbtn": {
     "1": "`🎤`  The song is already paused",
@@ -69,5 +71,10 @@
   "volume": {
     "down": "`🔉` The volume has been reduced",
     "up": "`🔊` The volume has been increased"
+  },
+  "skipallbtn": {
+    "advert": "Want to skip the entire song queue?",
+    "yes": "You have successfully skipped the song queue",
+    "no": "Song skipping has been canceled"
   }
 }

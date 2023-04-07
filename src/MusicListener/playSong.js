@@ -57,6 +57,12 @@ module.exports = (kimuraClient, queue, song) => {
     .setStyle(ButtonStyle.Secondary)
     .setLabel(`⏩`);
 
+  const skipallBtn = new ButtonBuilder()
+    .setCustomId("skipallbtn")
+    .setStyle(ButtonStyle.Secondary)
+    .setLabel(`⏭`);
+
+
   const loopBtn = new ButtonBuilder()
     .setCustomId("loopbtn")
     .setStyle(ButtonStyle.Secondary)
@@ -75,7 +81,8 @@ module.exports = (kimuraClient, queue, song) => {
   let components = new ActionRowBuilder().addComponents([
     stopBtn,
     playBtn,
-    skipBtn
+    skipBtn,
+    skipallBtn
   ]);
 
   let components2 = new ActionRowBuilder().addComponents([

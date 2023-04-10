@@ -8,10 +8,17 @@ module.exports = {
   async run(kimuraClient, interaction, language) {
     const queue = kimuraClient.distube.getQueue(interaction.guild.id);
 
+    var queueVolume = kimuraClient.distube.getQueue(queue.id).volume;
+
     const embedvol = new EmbedBuilder()
       .setColor(kimuraClient.config.defaultColorEmbed)
       .setDescription(
-        kimuraClient.languages.__({ phrase: "volume.down", locale: language })
+        kimuraClient.languages.__mf(
+          { phrase: "volume.down", locale: language },
+          {
+            volume: queueVolume,
+          }
+        )
       );
 
     const embedInfo2 = new EmbedBuilder()
@@ -33,8 +40,7 @@ module.exports = {
       });
     }
 
-
-      interaction.reply({ embeds: [embedvol], ephemeral: true });
-      await kimuraClient.distube.setVolume(interaction, queue.volume - 5);
+    interaction.reply({ embeds: [embedvol], ephemeral: true });
+    await kimuraClient.distube.setVolume(interaction, queue.volume - 5);
   },
 };

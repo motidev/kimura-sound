@@ -16,9 +16,13 @@ const guildModel = require("../../models/guild");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("setup")
-    .setDescription("Open the setup menu."),
+    .setDescription("Open the config menu."),
   async execute(interaction, kimuraClient, language) {
-    if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+    if (
+      !interaction.member.permissions.has(
+        PermissionsBitField.Flags.Administrator
+      )
+    ) {
       return interaction.reply({
         content: kimuraClient.languages.__({
           phrase: "permissions.admin",
@@ -31,37 +35,53 @@ module.exports = {
     // Creamos nuestros embeds
     const embed = new EmbedBuilder()
       .setColor(kimuraClient.config.defaultColorEmbed)
-      .setThumbnail("https://cdn.discordapp.com/attachments/1046214334545661952/1082980893846687744/logo_oficial.png")
+      .setThumbnail(
+        "https://cdn.discordapp.com/attachments/1046214334545661952/1082980893846687744/logo_oficial.png"
+      )
       .setTitle(
         kimuraClient.languages.__({
           phrase: "menu.title",
           locale: language,
         })
       )
-      .addFields(
-        {
-          name: kimuraClient.languages.__({ phrase: 'lang.langtitle', locale: language }),
-          value: kimuraClient.languages.__({ phrase: 'menu.menulang', locale: language })
-        }
-      )
+      .addFields({
+        name: kimuraClient.languages.__({
+          phrase: "lang.langtitle",
+          locale: language,
+        }),
+        value: kimuraClient.languages.__({
+          phrase: "menu.menulang",
+          locale: language,
+        }),
+      });
 
     // Botones de nuestro menu de configuracion
 
-    const langBtn = new ActionRowBuilder().addComponents([
-      new ButtonBuilder()
-        .setCustomId("langbtn")
-        .setStyle(ButtonStyle.Success)
-        .setLabel(
-          kimuraClient.languages.__({
-            phrase: "menu.langBtn",
-            locale: language,
-          })
-        ),
-    ]);
+    const langBtn = new ButtonBuilder()
+      .setCustomId("langbtn")
+      .setStyle(ButtonStyle.Success)
+      .setLabel(
+        kimuraClient.languages.__({
+          phrase: "menu.langBtn",
+          locale: language,
+        })
+      );
+
+    const logBtn = new ButtonBuilder()
+      .setCustomId("logbtn")
+      .setStyle(ButtonStyle.Primary)
+      .setLabel(
+        kimuraClient.languages.__({
+          phrase: "menu.logBtn",
+          locale: language,
+        })
+      );
+
+    const components = ActionRowBuilder().addComponents([logBtn, langBtn]);
 
     await interaction.reply({
       embeds: [embed],
-      components: [langBtn],
+      components: [components],
       ephemeral: true,
     });
   },

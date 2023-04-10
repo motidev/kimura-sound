@@ -95,7 +95,7 @@ module.exports = (kimuraClient, queue, song, playlist) => {
     loopBtn,
     voldownBtn,
     volupBtn,
-    listBtn
+    listBtn,
   ]);
 
   queue.textChannel.send({

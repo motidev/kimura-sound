@@ -19,7 +19,8 @@
     "langdesc": "You have changed the language to **{lang}**",
     "exitBtn": "Exit",
     "menulang": "Set the language of your server",
-    "langBtn": "Idioma"
+    "langBtn": "Idioma",
+    "logBtn": "Logs"
   },
   "lang": {
     "langtitle": "🔎 Language settings",
@@ -69,8 +70,8 @@
     "2": "`🎤`  There are no songs to skip"
   },
   "volume": {
-    "down": "`🔉` The volume has been reduced",
-    "up": "`🔊` The volume has been increased"
+    "down": "`🔉` The volume has been reduced `{volume}%`",
+    "up": "`🔊` The volume has been increased `{volume}%`"
   },
   "skipallbtn": {
     "advert": "Want to skip the entire song queue?",

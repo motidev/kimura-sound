@@ -20,7 +20,7 @@
 		"exitBtn": "Salir",
 		"menulang": "Configura el idioma de tu servidor",
 		"langBtn": "Idioma",
-		"playlist": "menu.playlist"
+		"logBtn": "Logs"
 	},
 	"lang": {
 		"langtitle": "🔎 Configuración del idioma",
@@ -45,7 +45,7 @@
 	"music": {
 		"voiceChannel": "Tienes que estar en un canal de voz",
 		"samechannel": "Debes estar en el mismo canal que yo",
-		"search": "`🔍` Buscando la canción!",
+		"add": "`🔍` Buscando la canción!",
 		"title": "`🎵` Ahora sonando",
 		"title1": "`⌚` Duracion",
 		"title2": "`👤` Pedida por",
@@ -70,8 +70,8 @@
 		"2": "`🎤`  No hay canciones para saltar"
 	},
 	"volume": {
-		"down": "`🔉` El volumen ha sido reducido",
-		"up": "`🔊` El volumen ha sido aumentado"
+		"down": "`🔉` El volumen ha sido reducido `{volume}%`",
+		"up": "`🔊` El volumen ha sido aumentado `{volume}%`"
 	},
 	"skipallbtn": {
 		"advert": "¿Quiere saltar toda la cola de canciones?",

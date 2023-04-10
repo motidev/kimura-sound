@@ -4,6 +4,7 @@ const {
   codeBlock,
 } = require("discord.js");
 const userSchema = require("../../models/blacklist");
+const { wssend } = require("../../functions/ws-send");
 
 module.exports = {
   developer: true,
@@ -18,6 +19,9 @@ module.exports = {
         .addStringOption((options) =>
           options.setName("user").setDescription("user").setRequired(true)
         )
+        .addStringOption((options) =>
+          options.setName("reason").setDescription("reason").setRequired(true)
+        )
     )
     .addSubcommand((options) =>
       options
@@ -26,6 +30,9 @@ module.exports = {
         .addStringOption((options) =>
           options.setName("user").setDescription("user").setRequired(true)
         )
+        .addStringOption((options) =>
+        options.setName("reason").setDescription("reason").setRequired(true)
+      )
     ),
   async execute(interaction, kimuraClient) {
     const targetCommand = interaction.options.getSubcommand();
@@ -33,6 +40,8 @@ module.exports = {
     const { options } = interaction;
 
     const target = options.getString("user");
+
+    const target2 = options.getString("reason");
 
     switch (targetCommand) {
       case "add":
@@ -51,6 +60,11 @@ module.exports = {
               });
             }
           );
+
+          wssend(
+            process.env.blacklistkey,
+            `Nuevo usuario añadido con id ${target} razon ${target2}`
+          );
         }
         break;
       case "remove":
@@ -63,6 +77,11 @@ module.exports = {
                     ephemeral: true,
                   });
             })
+
+            wssend(
+              process.env.blacklistkey,
+              `Nuevo usuario eliminado con id ${target} razon ${target2}`
+            );
         }
         break;
     }

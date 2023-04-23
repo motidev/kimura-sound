@@ -2,7 +2,7 @@
 <h1> 🤖 Music bot for discord developed with ❤️ by Moti </h1>
 </div>
 
-##Installation
+## Installation
 ```js
     git clone https://github.com/motidev/kimura-sound.git
     npm i
